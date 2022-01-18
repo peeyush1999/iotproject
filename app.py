@@ -23,7 +23,7 @@ class user(db.Model):
        self.emer_contact = emer_contact
 
 @app.route('/create', methods=['GET','POST'])
-def create():
+def index():
     if(request.method=='POST'):
         id = name = request.form.get('uname')
         name = request.form.get('uname')
@@ -42,6 +42,3 @@ def create():
             return "added successfully."
 
 
-if(__name__ == '__main__'):
-    SQLAlchemy.create_all(db)
-    app.run(port=8000,debug=True)
