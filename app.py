@@ -42,3 +42,6 @@ def index():
             return "added successfully."
 
 
+@app.route('/')
+def index():
+    return "added successfully."
